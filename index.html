@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClipForge (Musikage)</title>
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --ink: #1f1c17;
+      --muted: #62584c;
+      --accent: #d53f3f;
+      --card: #fffaf0;
+      --line: #ded3c4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(180deg, #f9f6ef 0%, #efe6d7 100%);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(255,255,255,0.7);
+    }
+    h1 {
+      margin: 18px 0 8px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.05;
+    }
+    p.lead {
+      max-width: 760px;
+      font-size: 19px;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin: 32px 0 40px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(63, 43, 23, 0.06);
+    }
+    h2 {
+      margin-top: 40px;
+      font-size: 24px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: var(--accent);
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="eyebrow">ClipForge (Musikage)</span>
+    <h1>Creator workflow for turning long-form music videos into short-form posts.</h1>
+    <p class="lead">
+      ClipForge is a creator-owned desktop workflow used to turn finished long-form videos into short clips,
+      generate titles and hashtags, and post those clips to platforms such as YouTube Shorts and TikTok.
+    </p>
+
+    <section class="grid">
+      <article class="card">
+        <h3>What it does</h3>
+        <p>Downloads or imports source videos, detects clip boundaries, formats clips vertically, and prepares post metadata.</p>
+      </article>
+      <article class="card">
+        <h3>Who it is for</h3>
+        <p>Used by the creator behind Musikage to publish original remix and game/anime music content more efficiently.</p>
+      </article>
+      <article class="card">
+        <h3>TikTok use case</h3>
+        <p>Lets the creator explicitly authorize TikTok posting, then posts creator-owned short clips with captions and hashtags.</p>
+      </article>
+    </section>
+
+    <h2>How TikTok integration works</h2>
+    <ul>
+      <li>The creator signs in with TikTok and grants permission through TikTok Login Kit.</li>
+      <li>ClipForge stores tokens locally for the creator's own account only.</li>
+      <li>When the creator schedules or posts a short, ClipForge sends the video and caption to TikTok using TikTok's official Content Posting API.</li>
+      <li>ClipForge then checks post status and records the result locally.</li>
+    </ul>
+
+    <h2>Legal</h2>
+    <ul>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+    </ul>
+
+    <footer>
+      ClipForge is a creator workflow for Musikage and is not affiliated with TikTok.
+    </footer>
+  </main>
+</body>
+</html>
